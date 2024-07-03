@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+:root {
+    /* (Dark Mode Elements) */
+    --Dark-Blue: hsl(209, 23%, 22%);
+    /* (Dark Mode Background) */
+    --Very-Dark-Blue: hsl(207, 26%, 17%);
+    /* (Light Mode Text) */
+    --Very-Dark-Blue: hsl(200, 15%, 8%);
+    /* (Light Mode Input) */
+    --Dark-Gray: hsl(0, 0%, 52%);
+    /* (Light Mode Background) */
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    /* (Dark Mode Text & Light Mode Elements) */
+    --White: hsl(0, 0%, 100%);
+}
+
+header {
+    padding: 20px 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--White);
+}
+
+.title {
+    font-weight: 800;
+}
+
+#theme-btn {
+    padding: 20px;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#theme-btn i {
+    margin-right: 5px;
+}
+
+main {
+    width: 100%;
+    padding-inline: 5%;
+    background-color: var(--Very-Light-Gray);
+}
+
+.filter-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.search-box {
+    padding: 20px;
+    width: 500px;
+    box-shadow: 1px 1px 5px var(--Dark-Gray);
+    background-color: var(--White);
+    border-radius: 5px;
+}
+
+.search-box i {
+    color: var(--Dark-Gray);
+}
+
+#search {
+    outline: none;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+#region-filter {
+    width: 200px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
