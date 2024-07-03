@@ -14,7 +14,9 @@ const displayCountries = async () => {
 
     let dataDisplay = payload.map((country) => {
         return `<div class="card">
-                                <img src=${country.flags.svg} alt="">
+                                <div class="img-container">
+                                    <img src=${country.flags.svg} alt="Flag of ${country.name}">
+                                </div>
                                 <div class="card-summary">
                                     <h2>${country.name}</h2>
                                     <p><span>Population:</span> ${country.population.toLocaleString()}</p>

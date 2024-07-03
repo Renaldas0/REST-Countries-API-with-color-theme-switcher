@@ -96,11 +96,11 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 30px;
+    gap: 50px;
 }
 
 .card {
-    width: 350px;
+    width: 300px;
     border-radius: 5px;
     overflow: hidden;
     background-color: var(--White);
@@ -108,8 +108,15 @@ main {
     box-shadow: 1px 1px 10px var(--Dark-Gray);
 }
 
+.img-container {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+}
+
 .card img {
     width: 100%;
+    height: auto;
 }
 
 .card-summary {
