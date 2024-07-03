@@ -54,6 +54,7 @@ main {
 }
 
 .filter-container {
+    padding-top: 50px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -66,6 +67,7 @@ main {
     box-shadow: 1px 1px 5px var(--Dark-Gray);
     background-color: var(--White);
     border-radius: 5px;
+    color: var(--Very-Dark-Blue);
 }
 
 .search-box i {
@@ -80,7 +82,33 @@ main {
 
 #region-filter {
     width: 200px;
-    padding: 10px 20px;
+    padding: 20px;
     font-size: 16px;
     border-radius: 5px;
+    box-shadow: 1px 1px 5px var(--Dark-Gray);
+    background-color: var(--White);
+    color: var(--Very-Dark-Blue);
+}
+
+#card-container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.card {
+    width: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: var(--White);
+}
+
+.card img {
+    width: 100%;
+}
+
+.card-summary {
+    padding: 10px 20px;
 }
