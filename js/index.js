@@ -1,13 +1,30 @@
+const apiEndpoint = "../rest-countries-api-with-color-theme-switcher-master/data.json";
 const cardContainer = document.getElementById("card-container");
 
-const data = fetch("../rest-countries-api-with-color-theme-switcher-master");
+const getData = async () => {
+    const response = await fetch(apiEndpoint);
+    const data = await response.json();
+    return data;
+}
 
-cardContainer.innerHTML = `<div class="card">
-                                <img src="https://flagcdn.com/af.svg" alt="">
+// getData();
+
+const displayCountries = async () => {
+    const payload = await getData();
+
+    let dataDisplay = payload.map((country) => {
+        return `<div class="card">
+                                <img src=${country.flags.svg} alt="">
                                 <div class="card-summary">
-                                    <h2>Country name</h2>
-                                    <p>Population:</p>
-                                    <p>Region:</p>
-                                    <p>Capital:</p>
+                                    <h2>${country.name}</h2>
+                                    <p><span>Population:</span> ${country.population.toLocaleString()}</p>
+                                    <p><span>Region:</span> ${country.region}</p>
+                                    <p><span>Capital:</span> ${country.capital}</p>
                                 </div>
-                            </div>`;
+                            </div>`
+    })
+
+    cardContainer.innerHTML = dataDisplay;
+}
+
+displayCountries();
