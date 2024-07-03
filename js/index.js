@@ -1,5 +1,7 @@
 const cardContainer = document.getElementById("card-container");
 
+const data = fetch("../rest-countries-api-with-color-theme-switcher-master");
+
 cardContainer.innerHTML = `<div class="card">
                                 <img src="https://flagcdn.com/af.svg" alt="">
                                 <div class="card-summary">
