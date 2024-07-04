@@ -30,3 +30,30 @@ const displayCountries = async () => {
 }
 
 displayCountries();
+
+// Theme 
+
+let darkMode = localStorage.getItem("darkMode");
+const themeBtn = document.getElementById("theme-btn");
+
+const enableDarkMode = () => {
+    //1. add darkmode class to body
+    console.log("test")
+    document.body.classList.add("dark-mode");
+    //2. update darkmode in localStorage
+    localStorage.setItem("darkMode", "enabled");
+};
+
+const disableDarkMode = () => {
+    //1. add darkmode class to body
+    document.body.classList.remove("darkMode");
+    //2. update darkmode in localStorage
+    localStorage.setItem("darkMode", null);
+};
+
+
+themeBtn.addEventListener("click", () => {
+    if (darkMode !== "enabled") {
+        enableDarkMode();
+    }
+})

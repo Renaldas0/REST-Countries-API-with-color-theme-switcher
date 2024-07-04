@@ -23,6 +23,11 @@
     --White: hsl(0, 0%, 100%);
 }
 
+.dark-mode {
+    color: var(--White);
+    background-color: var(--Dark-Blue);
+}
+
 header {
     padding: 20px 5%;
     width: 100%;
@@ -101,7 +106,7 @@ main {
 }
 
 .card {
-    width: 320px;
+    max-width: 320px;
     border-radius: 5px;
     overflow: hidden;
     background-color: var(--White);
