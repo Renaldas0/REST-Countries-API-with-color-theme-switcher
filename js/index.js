@@ -26,7 +26,7 @@ const displayCountries = async () => {
                             </div>`
     })
 
-    cardContainer.innerHTML = dataDisplay;
+    cardContainer.innerHTML = dataDisplay.join("");
 }
 
 displayCountries();
