@@ -23,9 +23,69 @@
     --White: hsl(0, 0%, 100%);
 }
 
-.dark-mode {
-    color: var(--White);
+header[data-theme='default'] {
+    background-color: var(--White);
+}
+
+header[data-theme='dark'] {
     background-color: var(--Dark-Blue);
+}
+
+.theme[data-theme='default'] {
+    color: var(--Very-Dark-Blue);
+}
+
+.theme[data-theme='dark'] {
+    color: var(--White);
+}
+
+main[data-theme='default'] {
+    background-color: var(--Very-Light-Gray);
+}
+
+main[data-theme='dark'] {
+    background-color: var(--Very-Dark-Blue);
+}
+
+.search-box[data-theme='default'] {
+    box-shadow: 1px 1px 5px var(--Dark-Gray);
+    background-color: var(--White);
+    color: var(--Very-Dark-Blue);
+}
+
+.search-box[data-theme='dark'] {
+    box-shadow: 1px 1px 5px var(--Dark-Blue);
+    background-color: var(--Dark-Blue);
+    color: var(--Very-Light-Gray);
+}
+
+#search[data-theme='default'] {
+    color: var(--Very-Dark-Blue);
+}
+
+#search[data-theme='dark'] {
+    color: var(--Very-Light-Gray);
+}
+
+.filter[data-theme='default'] {
+    background-color: var(--White);
+    color: var(--Very-Dark-Blue);
+}
+
+.filter[data-theme='dark'] {
+    background-color: var(--Dark-Blue);
+    color: var(--Very-Light-Gray);
+}
+
+.card[data-theme='default'] {
+    background-color: var(--White);
+    box-shadow: 1px 1px 10px var(--Dark-Gray);
+}
+
+.card[data-theme='dark'] {
+    background-color: var(--Dark-Blue);
+    box-shadow: 1px 1px 10px var(--Dark-Gray);
+    color: var(--White);
 }
 
 header {
@@ -33,7 +93,6 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: var(--White);
 }
 
 .title {
@@ -46,6 +105,7 @@ header {
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+    background: none;
 }
 
 #theme-btn i {
@@ -55,7 +115,6 @@ header {
 main {
     width: 100%;
     padding-inline: 5%;
-    background-color: var(--Very-Light-Gray);
 }
 
 .filter-container {
@@ -69,10 +128,7 @@ main {
 .search-box {
     padding: 20px;
     width: 500px;
-    box-shadow: 1px 1px 5px var(--Dark-Gray);
-    background-color: var(--White);
     border-radius: 5px;
-    color: var(--Very-Dark-Blue);
 }
 
 .search-box i {
@@ -84,6 +140,7 @@ main {
     margin-left: 20px;
     font-size: 16px;
     width: 90%;
+    background: none;
 }
 
 #region-filter {
@@ -109,9 +166,7 @@ main {
     max-width: 320px;
     border-radius: 5px;
     overflow: hidden;
-    background-color: var(--White);
     cursor: pointer;
-    box-shadow: 1px 1px 10px var(--Dark-Gray);
 }
 
 .img-container {
@@ -131,6 +186,7 @@ main {
 
 .card-summary p {
     margin-top: 5px;
+    font-size: 12px;
 }
 
 .card-summary span {

@@ -9,22 +9,22 @@
 </head>
 <body>
     
-    <header>
+    <header data-theme="default" id="header">
         <h1 class="title">Where in the world?</h1>
-        <button id="theme-btn">
+        <button id="theme-btn" data-theme="default" class="theme">
             <span><i class="fa-solid fa-moon"></i></span>
             Dark Mode
         </button>
     </header>
 
-    <main id="main-container">
+    <main id="main-container" data-theme="default">
         <div class="filter-container">
-            <div class="search-box">
+            <div class="search-box" data-theme="default" id="search-bar">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input id="search" type="text" placeholder="Search for a country...">
+                <input id="search" type="text" placeholder="Search for a country..." data-theme="default">
             </div>
             
-            <select name="region-filter" id="region-filter">
+            <select name="region-filter" id="region-filter" class="filter" data-theme="default">
                 <option value="" disabled selected hidden>Filter by Region</option>
                 <option value="africa">Africa</option>
                 <option value="america">America</option>

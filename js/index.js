@@ -13,7 +13,7 @@ const displayCountries = async () => {
     const payload = await getData();
 
     let dataDisplay = payload.map((country) => {
-        return `<div class="card">
+        return `<div class="card" data-theme="default">
                                 <div class="img-container">
                                     <img src=${country.flags.svg} alt="Flag of ${country.name}">
                                 </div>
@@ -36,12 +36,25 @@ displayCountries();
 let darkMode = localStorage.getItem("darkMode");
 const themeBtn = document.getElementById("theme-btn");
 
+const header = document.getElementById("header");
+const main = document.getElementById("main-container");
+const searchBar = document.getElementById("search-bar");
+const regionFilter = document.getElementById("region-filter");
+const card = document.getElementsByClassName("card");
+const searchInput = document.getElementById("search");
+
 const enableDarkMode = () => {
     //1. add darkmode class to body
     console.log("test")
-    document.body.classList.add("dark-mode");
+    header.setAttribute('data-theme', 'dark');
+    themeBtn.setAttribute('data-theme', 'dark');
+    main.setAttribute('data-theme', 'dark');
+    searchBar.setAttribute('data-theme', 'dark');
+    regionFilter.setAttribute('data-theme', 'dark');
+    card.setAttribute('data-theme', 'dark');
+    searchInput.setAttribute('data-theme', 'dark');
     //2. update darkmode in localStorage
-    localStorage.setItem("darkMode", "enabled");
+    // localStorage.setItem("darkMode", "enabled");
 };
 
 const disableDarkMode = () => {
@@ -53,7 +66,7 @@ const disableDarkMode = () => {
 
 
 themeBtn.addEventListener("click", () => {
-    if (darkMode !== "enabled") {
-        enableDarkMode();
-    }
+    // if (darkMode !== "enabled") {
+    enableDarkMode();
+    // }
 })
