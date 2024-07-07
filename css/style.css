@@ -6,6 +6,11 @@
     border: none;
     box-sizing: border-box;
     font-family: "Nunito Sans", sans-serif;
+    text-decoration: none;
+}
+
+a {
+    color: var(--Very-Dark-Blue)
 }
 
 :root {

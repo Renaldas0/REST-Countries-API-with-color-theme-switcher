@@ -1,0 +1,52 @@
+#back-btn {
+    margin-top: 30px;
+    padding: 10px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    background: none;
+    box-shadow: 1px 1px 5px var(--Very-Dark-Blue);
+}
+
+#flag-content[data-theme="default"] {
+    background-color: var(--White);
+}
+
+#flag-content[data-theme="dark"] {
+    background-color: var(--White);
+}
+
+a {
+    padding: 10px 40px;
+}
+
+i {
+    margin-right: 10px;
+}
+
+#flag-container {
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    gap: 30px;
+}
+
+.flag-img {
+    width: 50%;
+    overflow: hidden;
+}
+
+.flag-img img {
+    width: 100%;
+}
+
+.flag-description {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-top: 20px;
+}
+
+.flag-summary {
+    display: flex;
+    justify-content: space-between;
+}

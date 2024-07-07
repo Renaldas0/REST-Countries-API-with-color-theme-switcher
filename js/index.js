@@ -45,13 +45,12 @@ const searchInput = document.getElementById("search");
 
 const enableDarkMode = () => {
     //1. add darkmode class to body
-    console.log("test")
     header.setAttribute('data-theme', 'dark');
     themeBtn.setAttribute('data-theme', 'dark');
     main.setAttribute('data-theme', 'dark');
     searchBar.setAttribute('data-theme', 'dark');
     regionFilter.setAttribute('data-theme', 'dark');
-    card.setAttribute('data-theme', 'dark');
+    // card.setAttribute('data-theme', 'dark');
     searchInput.setAttribute('data-theme', 'dark');
     //2. update darkmode in localStorage
     // localStorage.setItem("darkMode", "enabled");
@@ -59,14 +58,20 @@ const enableDarkMode = () => {
 
 const disableDarkMode = () => {
     //1. add darkmode class to body
-    document.body.classList.remove("darkMode");
+    header.setAttribute('data-theme', 'default');
+    themeBtn.setAttribute('data-theme', 'default');
+    main.setAttribute('data-theme', 'default');
+    searchBar.setAttribute('data-theme', 'default');
+    regionFilter.setAttribute('data-theme', 'default');
+    // card.setAttribute('data-theme', 'default');
+    searchInput.setAttribute('data-theme', 'default');
     //2. update darkmode in localStorage
-    localStorage.setItem("darkMode", null);
+    // localStorage.setItem("darkMode", null);
 };
 
 
 themeBtn.addEventListener("click", () => {
-    // if (darkMode !== "enabled") {
-    enableDarkMode();
-    // }
+    if (darkMode !== "enabled") {
+        enableDarkMode();
+    }
 })
