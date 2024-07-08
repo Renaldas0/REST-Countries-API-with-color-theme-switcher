@@ -36,6 +36,14 @@ header[data-theme='dark'] {
     background-color: var(--Dark-Blue);
 }
 
+#title[data-theme='default'] {
+    color: var(--Very-Dark-Blue);
+}
+
+#title[data-theme='dark'] {
+    color: var(--White);
+}
+
 .theme[data-theme='default'] {
     color: var(--Very-Dark-Blue);
 }
@@ -100,7 +108,7 @@ header {
     justify-content: space-between;
 }
 
-.title {
+#title {
     font-weight: 800;
 }
 
@@ -145,7 +153,7 @@ main {
     margin-left: 20px;
     font-size: 16px;
     width: 90%;
-    background: none;
+    background: transparent;
 }
 
 #region-filter {

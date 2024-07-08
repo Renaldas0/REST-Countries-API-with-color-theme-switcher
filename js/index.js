@@ -37,6 +37,7 @@ let darkMode = localStorage.getItem("darkMode");
 const themeBtn = document.getElementById("theme-btn");
 
 const header = document.getElementById("header");
+const title = document.getElementById("title");
 const main = document.getElementById("main-container");
 const searchBar = document.getElementById("search-bar");
 const regionFilter = document.getElementById("region-filter");
@@ -46,6 +47,7 @@ const searchInput = document.getElementById("search");
 const enableDarkMode = () => {
     //1. add darkmode class to body
     header.setAttribute('data-theme', 'dark');
+    title.setAttribute('data-theme', 'dark');
     themeBtn.setAttribute('data-theme', 'dark');
     main.setAttribute('data-theme', 'dark');
     searchBar.setAttribute('data-theme', 'dark');

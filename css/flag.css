@@ -12,7 +12,7 @@
 }
 
 #flag-content[data-theme="dark"] {
-    background-color: var(--White);
+    background-color: var(--Very-Dark-Blue);
 }
 
 a {
@@ -27,7 +27,7 @@ i {
     margin-top: 30px;
     display: flex;
     width: 100%;
-    gap: 30px;
+    gap: 100px;
 }
 
 .flag-img {
@@ -42,8 +42,9 @@ i {
 .flag-description {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     width: 50%;
-    padding-top: 20px;
+    padding: 0 20px;
 }
 
 .flag-summary {
