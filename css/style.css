@@ -97,7 +97,7 @@ main[data-theme='dark'] {
 
 .card[data-theme='dark'] {
     background-color: var(--Dark-Blue);
-    box-shadow: 1px 1px 10px var(--Dark-Gray);
+    box-shadow: 1px 1px 10px var(--Dark-Blue);
     color: var(--White);
 }
 
@@ -164,6 +164,10 @@ main {
     box-shadow: 1px 1px 5px var(--Dark-Gray);
     background-color: var(--White);
     color: var(--Very-Dark-Blue);
+}
+
+#region-filter select {
+    border-radius: 5px;
 }
 
 #card-container {
