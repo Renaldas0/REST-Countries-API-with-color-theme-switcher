@@ -51,3 +51,14 @@ i {
     display: flex;
     justify-content: space-between;
 }
+
+.flag-summary span {
+    font-weight: 600;
+}
+
+button {
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    cursor: pointer;
+}
