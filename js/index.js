@@ -9,10 +9,10 @@ const getData = async () => {
 
 // getData();
 
-const displayCountries = async () => {
+const displayCountries = async (countries) => {
     const payload = await getData();
 
-    let dataDisplay = payload.map((country) => {
+    let dataDisplay = countries.map((country) => {
         return `<div class="card" data-theme="default">
                                 <div class="img-container">
                                     <img src=${country.flags.svg} alt="Flag of ${country.name}">
@@ -33,7 +33,14 @@ const displayCountries = async () => {
     }
 }
 
-displayCountries();
+let countriesData = [];
+
+const init = async () => {
+    countriesData = await getData();
+    displayCountries(countriesData);
+}
+
+init();
 
 // Theme 
 
@@ -88,4 +95,22 @@ themeBtn.addEventListener("click", () => {
     } else {
         disableDarkMode();
     }
+});
+
+let debounceTimeout;
+
+searchInput.addEventListener('input', () => {
+    clearTimeout(debounceTimeout);
+    debounceTimeout = setTimeout(() => {
+        const searchTerm = searchInput.value.toLowerCase();
+        const filteredCountries = countriesData.filter(country => country.name.toLowerCase().includes(searchTerm));
+        displayCountries(filteredCountries);
+    }, 1000); // 1 second delay to prevent too many requests
+});
+
+
+regionFilter.addEventListener('change', () => {
+    const filterTerm = regionFilter.value.toLowerCase();
+    const filteredCountries = countriesData.filter(country => country.region.toLowerCase().includes(filterTerm));
+    displayCountries(filteredCountries);
 });

@@ -80,12 +80,14 @@ main[data-theme='dark'] {
     color: var(--Very-Light-Gray);
 }
 
-.filter[data-theme='default'] {
+#region-filter[data-theme="default"] {
+    box-shadow: 1px 1px 5px var(--Dark-Gray);
     background-color: var(--White);
     color: var(--Very-Dark-Blue);
 }
 
-.filter[data-theme='dark'] {
+#region-filter[data-theme="dark"] {
+    box-shadow: 1px 1px 5px var(--Very-Dark-Blue);
     background-color: var(--Dark-Blue);
     color: var(--Very-Light-Gray);
 }
@@ -128,6 +130,7 @@ header {
 main {
     width: 100%;
     padding-inline: 5%;
+    min-height: 100vh;
 }
 
 .filter-container {
@@ -161,9 +164,6 @@ main {
     padding: 20px;
     font-size: 16px;
     border-radius: 5px;
-    box-shadow: 1px 1px 5px var(--Dark-Gray);
-    background-color: var(--White);
-    color: var(--Very-Dark-Blue);
 }
 
 #region-filter select {
